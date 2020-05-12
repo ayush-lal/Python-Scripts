@@ -56,13 +56,13 @@ myMessageSection3.text(OnCallEmail)
 myMessageSection4.title("Standby Schedule")
 
 # Add text to the message
-msg.summary("Retreiving the OnCall schedule for Execs")
+msg.summary("Retreiving the OnCall schedule")
 msg.addSection(myMessageSection4)
 msg.addSection(myMessageSection)
 msg.addSection(myMessageSection2)
 msg.addSection(myMessageSection3)
 msg.addLinkButton("View PD Schedule",
-                  "https://derivco.pagerduty.com/schedules#P2RZ9GZ")
+                  "https://derivco.pagerduty.com/schedules#specific_schedule_id")
 
 # send the message
 # msg.printme()
