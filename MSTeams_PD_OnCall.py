@@ -19,23 +19,23 @@ data = response.json()
 #data2 = json.dumps(data, indent=2)
 
 for item in data['oncalls']:
-    execOnCall = item['user']['summary']
+    OnCall = item['user']['summary']
 
-if execOnCall == "Person 1":
-    execPhone = "Contact Number"
-    execEmail = "person1@company.com"
-elif execOnCall == "Person 2":
-    execPhone = "Contact Number"
-    execEmail = "person2@company.com"
-elif execOnCall == "Person 3":
-    execPhone = "Contact Number"
-    execEmail = "person3@company.com"
-elif execOnCall == "Person 4":
-    execPhone = "Contact Number"
-    execEmail = "person4@company.com"
+if OnCall == "Person 1":
+    OnCallPhone = "Contact Number"
+    OnCallEmail = "person1@company.com"
+elif OnCall == "Person 2":
+    OnCallPhone = "Contact Number"
+    OnCallEmail = "person2@company.com"
+elif OnCall == "Person 3":
+    OnCallPhone = "Contact Number"
+    OnCallEmail = "person3@company.com"
+elif OnCall == "Person 4":
+    OnCallPhone = "Contact Number"
+    OnCallEmail = "person4@company.com"
 else:
-    execPhone = "ERROR"
-    execEmail = "ERROR"
+    OnCallPhone = "ERROR"
+    OnCallEmail = "ERROR"
 
 # Start composing message for MS Teams
 # Teams channel webhook URL
@@ -50,9 +50,9 @@ myMessageSection2 = pymsteams.cardsection()
 myMessageSection3 = pymsteams.cardsection()
 myMessageSection4 = pymsteams.cardsection()
 
-myMessageSection.text(execOnCall)
-myMessageSection2.text(execPhone)
-myMessageSection3.text(execEmail)
+myMessageSection.text(OnCall)
+myMessageSection2.text(OnCallPhone)
+myMessageSection3.text(OnCallEmail)
 myMessageSection4.title("Standby Schedule")
 
 # Add text to the message
